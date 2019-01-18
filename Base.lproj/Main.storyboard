@@ -16,12 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwa-qy-B5u" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                                <rect key="frame" x="16" y="148" width="343" height="548.66666666666652"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="6Mf-ev-WJo"/>
+                                    <constraint firstAttribute="width" secondItem="Wwa-qy-B5u" secondAttribute="height" multiplier="5:8" id="yle-0O-Kh9"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="j5c-92-hHs"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AcB-Zx-EKR" appends="YES" id="cJH-xp-b3q"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wwa-qy-B5u" secondAttribute="trailing" constant="16" id="HTr-IH-XFJ"/>
+                            <constraint firstItem="Wwa-qy-B5u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JOl-br-G7l"/>
+                            <constraint firstItem="Wwa-qy-B5u" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rb9-pg-qLD"/>
+                            <constraint firstItem="Wwa-qy-B5u" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="fnK-Q2-DN7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wwa-qy-B5u" secondAttribute="bottom" constant="16" id="gJu-Bq-HxI"/>
+                            <constraint firstItem="Wwa-qy-B5u" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kMa-ci-3FF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="Wwa-qy-B5u" id="gpk-36-Uwe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AcB-Zx-EKR">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="nEg-sa-PK8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="71.674876847290648"/>
         </scene>
     </scenes>
 </document>
